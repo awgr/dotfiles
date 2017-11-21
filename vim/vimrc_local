@@ -1,0 +1,2 @@
+noremap <LeftDrag> <LeftMouse>
+noremap! <LeftDrag> <LeftMouse>

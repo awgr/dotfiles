@@ -1,0 +1,96 @@
+[core]
+    excludesfile=/home/agreene/.gitignore
+	editor = vim
+[branch]
+	autosetuprebase = always
+[push]
+	default = upstream
+[alias]
+	exec = ! "exec"
+	st = status
+	cap = "!f(){ ! git diff-index --quiet HEAD -- && git add --all && git commit -m "$1" && git push origin master; };f"
+	co = checkout
+	cp = cherry-pick
+	last = log -1
+	hlog = log --date-order --graph --format=\"%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+	hl = log -n10 --date-order --graph --format=\"%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+	tlog = log --topo-order --graph --format=\"%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+	tl = log -n10 --topo-order --graph --format=\"%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+	ci = commit
+	pop = reset HEAD^
+	sp = stash pop
+	rb = rebase --ignore-whitespace HEAD@{u}
+	rbi = rebase -i --autosquash HEAD@{u}
+	rbc = rebase --continue
+	rbs = rebase --skip
+	rba = rebase --abort
+	rst = "!f(){ git reset HEAD --hard && git checkout origin/$1 && git branch -D $1 && git checkout $1; };f"
+
+[diff]
+	mnemonicPrefix = true
+	wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+	compactionHeuristic = true
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
+
+[pretty]
+	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
+	compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ar%n %C(auto)%d%n"
+
+[merge]
+	defaultToUpstream = true
+	tool = vimdiff
+
+[mergetool]
+	keepBackup = false
+
+[push]
+	default = upstream
+
+[credential]
+	helper = cache --timeout=3600
+
+[grep]
+	lineNumber = true
+
+[advice]
+	detachedHead = false
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local
