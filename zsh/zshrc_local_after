@@ -1,6 +1,7 @@
 export PATH="/usr/bin:/usr/sbin:/bin:/sbin:"
 export PATH="/usr/local/sbin:"$PATH
 export PATH="/usr/local/bin:"$PATH
+export PATH="/usr/local/go/bin:"$PATH
 
 # il_scripts
 
@@ -21,9 +22,8 @@ export PATH="/usr/local/bin:"$PATH
 # export ARCHFLAGS="-arch x86_64"
 
 # Java default
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/
-export JAVA_1_8_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/
-export JAVA_1_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
+export JAVA_1_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -36,50 +36,6 @@ bindkey -v
 
 disownLastJob() {
   disown %$(echo $(jobs -l) | grep $! | awk '{printf $1}' | sed 's/\[//' | sed 's/\]//');
-}
-
-eclipse () {
-  nohup /Applications/Eclipse.app/Contents/MacOS/eclipse -showlocation -vmargs -Xmx4g 1> /dev/null &;
-  disownLastJob
-}
-
-hydrate () {
-  echo "== Postgres =="
-  /usr/local/Cellar/postgresql94/9.4.8/bin/pg_ctl -D /Volumes/git/postgresData -l ~/Downloads/postgres-logfile $1 --mode=fast; 
-  echo ""
-  echo "== Hydration Service =="
-  ~/repos/local-hs/bin/hydrationService $1;
-}
-
-
-hydr8() {
-  echo "== Postgres8 =="
-  /usr/local/Cellar/postgresql8/8.4.22/bin/pg_ctl -D /Volumes/git/postgres8Data -l ~/Downloads/postgres8-logfile $1 --mode=fast; 
-  echo ""
-  echo "== PEM Hydration Service =="
-  /Volumes/git/local-hydration-osx-pem/bin/hydrationService $1;
-}
-
-crashplan() {
-    if [[ $# -eq 0 ]]
-    then
-        echo "Syntax: crashplan [ start | stop ]"
-        return 1
-    fi
-    if [[ "${1}" = "stop" ]]
-    then
-        echo "Stopping Crashplan"
-        sudo launchctl unload '/Library/LaunchDaemons/com.crashplan.engine.plist'
-        return 0;
-    elif [[ "${1}" = "start" ]]
-    then
-        echo "Starting Crashplan"
-        sudo launchctl load '/Library/LaunchDaemons/com.crashplan.engine.plist'
-        return 0;
-    else
-        echo "Syntax: crashplan [ start | stop ]"
-        return 1;
-    fi
 }
 
 ports() {
@@ -97,14 +53,6 @@ compgen() {
     bash -c compgen $@;
 }
 
-push() {
-    [[ $# -ne 0 ]] && BRANCH="${1}" || BRANCH="develop";
-    [[ "$(git show-ref -s HEAD)" = "$(git merge-base origin/${BRANCH} HEAD )" ]] && echo "NO REBASE NEEDED" || git fetch && git rebase origin/${BRANCH}
-    currentHash="$(git show-ref -s HEAD)"
-    localBuildSuccessLock="$(git rev-parse --show-toplevel)/${currentHash}"
-    [[ -f ${localBuildSuccessLock} ]] && "NO BUILD NEEDED" || env USE_ECJ=1 ./gradlew classes testClasses checkstyleMain checkstyleTest && touch "${localBuildSuccessLock}"
-}
-
 alias list='/bin/ls'
 alias ls='ls -lh'
 alias ll='ls -GFlash'
@@ -114,19 +62,27 @@ alias ..3='cd ../../..'
 alias ,,='popd'
 alias cb='pbcopy'
 alias rsapub='cat ~/.ssh/id_rsa.pub | cb'
-alias pgdevhook='gitdir=$(git rev-parse --git-dir); scp -p -P 29418 agreene@gerrit.yojoe.local:hooks/commit-msg ${gitdir}/hooks/'
 alias cp='cp -v'
 alias mv='mv -v'
 alias scp='scp -v'
+alias mong-staging='/usr/local/Cellar/mongodb@3.2/3.2.11/bin/mongo mongo2-aws-staging.split.io:53944/split_staging_v2 -u splitadminstaging -p benlomondstaging'
+alias fix-repo='mvn clean install -Dmaven.test.skip=true -T 1'
 
-export PGPORT=$(grep port\ \= /Volumes/git/postgresData/postgresql.conf | awk '{printf $3}');
+export PGPORT=5432
 
 echo "=====ZSHRC CONFIGURATION OUTPUT=====";
 echo "Setting PGPORT to ${PGPORT} . . . ";
-echo "Sourcing IL scripts and editing path"
-export PATH="/Volumes/git/il_scripts:"$PATH
-echo "Configuring docker components"
-export PATH="/Volumes/git/hydration:"$PATH
+
+export SPLIT_PROJECTS_ROOT=~/code
+echo "Configuring split project root to: ${SPLIT_PROJECTS_ROOT}"
+echo "Starting in split projects root: ${SPLIT_PROJECTS_ROOT}"
+cd $SPLIT_PROJECTS_ROOT
+
+alias split-dev="pushd .; cd ${SPLIT_PROJECTS_ROOT}/docker-compose; docker-compose up 2>&1 1> ${SPLIT_PROJECTS_ROOT}/docker-compose/docker-compose.log & disownLastJob;popd"
 echo "Adding postgres 9.4 binaries to path"
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
+source ~/code/zsh-nvm/zsh-nvm.plugin.zsh
+echo "Sourcing NVM as a ZSH plugin."
+export NVM_DIR="$HOME/.nvm"
+echo "Configuring Node Version Manager working directory to: ${NVM_DIR}"

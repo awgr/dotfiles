@@ -9,6 +9,7 @@
 	exec = ! "exec"
 	st = status
 	cap = "!f(){ ! git diff-index --quiet HEAD -- && git add --all && git commit -m "$1" && git push origin master; };f"
+	rstall = "!f(){ ! git checkout HEAD^; git for-each-ref --format '%(refname:short)' refs/heads | xargs git branch -D; };f"
 	co = checkout
 	cp = cherry-pick
 	last = log -1

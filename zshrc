@@ -27,8 +27,9 @@ source ~/.zsh/syntax.zsh
 # External plugins (initialized after)
 source ~/.zsh/plugins_after.zsh 
 
+export PATH=~/.extra-bin:${PATH}
+
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zsh/zshrc_local_after ]; then
     source ~/.zsh/zshrc_local_after
 fi
-source /usr/local/dev-env/bin/profile
