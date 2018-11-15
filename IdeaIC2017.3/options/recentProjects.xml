@@ -1,0 +1,141 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/code/spark" />
+        <option value="$USER_HOME$/code/spark-jobs" />
+        <option value="$USER_HOME$/code/Main" />
+        <option value="$USER_HOME$/code/impressiongenerator" />
+        <option value="$USER_HOME$/code/hello-java" />
+        <option value="$USER_HOME$/code/java-client/client" />
+        <option value="$USER_HOME$/code/Main/EncryptionModule" />
+        <option value="$USER_HOME$/code/split-testing" />
+        <option value="$USER_HOME$/code/java-client" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/code/Main" />
+        <option value="$USER_HOME$/code/spark-jobs" />
+        <option value="$USER_HOME$/code/spark" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/code/spark" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/code/Main">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1542242885851" />
+              <option name="buildTimestamp" value="1514223086777" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/Main/EncryptionModule">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.3727.127" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1515630036222" />
+              <option name="buildTimestamp" value="1511791644455" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/hello-java">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1532984837028" />
+              <option name="buildTimestamp" value="1514223081948" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/impressiongenerator">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1538001062700" />
+              <option name="buildTimestamp" value="1514223111066" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/java-client">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.3727.127" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1515097859104" />
+              <option name="buildTimestamp" value="1511791640341" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/java-client/client">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1532725858893" />
+              <option name="buildTimestamp" value="1514223099235" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/spark">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1542242885851" />
+              <option name="buildTimestamp" value="1514223086777" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/spark-jobs">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.4127.27" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1542242885851" />
+              <option name="buildTimestamp" value="1514223086777" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/split-testing">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.3727.127" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1515441014678" />
+              <option name="buildTimestamp" value="1511791644455" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/idea/Main">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-173.3727.127" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1512941091419" />
+              <option name="buildTimestamp" value="1511791653171" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/code" />
+  </component>
+</application>

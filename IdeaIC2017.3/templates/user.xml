@@ -1,0 +1,41 @@
+<templateSet group="user">
+  <template name="log4s" value="private static final Logger _log = LoggerFactory.getLogger($CLASS$.class);&#10;" description="Generates a logger" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="entryp" value="public static void main(String[] args) {&#10;&#10;}" description="Generates a static entry point" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="mongcli" value="    public static void main(String[] args) {&#10;        Injector injector = Guice.createInjector(new MongoModule(), new DaoModule(), new ConfigModule());&#10;        Datastore ds = injector.getInstance(Datastore.class);&#10;        &#10;        final BasicDAO&lt;MongoX, String&gt; deepMongoDAO = new BasicDAO&lt;&gt;(MongoX.class, ds);&#10;        &#10;        deepMongoDAO.find().asList() . . .&#10;    }" description="Generates a skeleton for a mongo client" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="sdkcli" value="    public static void main(String[] args) throws Exception {&#10;        String apiKey = &quot;u8us4mci2qhufmsjrku0fk8c13fchnp8dk8j&quot;;&#10;        SplitClient client = SplitFactoryBuilder.build(apiKey,&#10;                SplitClientConfig.builder()&#10;                        .endpoint(&#10;                                &quot;https://sdk-aws-staging.split.io/api&quot;,&#10;                                &quot;https://events-aws-staging.split.io/api&quot;)&#10;                        .ready(30_000)&#10;                        .build()).client();&#10;        client.track(UUID.randomUUID().toString(),&#10;                &quot;user&quot;,&#10;                &quot;some.very.long.string.which.maybe.breaks.the.backend.because.we.don't.bounds.check.the.user.input.also.the.game&quot;,&#10;                10.0);&#10;    }" description="creates a simple sdk client entry point" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="simplecli" value="    private static final ArrayBlockingQueue&lt;Future&lt;Response&gt;&gt; queue = new ArrayBlockingQueue&lt;&gt;(50_000);&#10;    private static final Logger _log = LoggerFactory.getLogger($CLASS$.class);&#10;    &#10;    public static void main(String[] args) throws Exception {&#10;    &#10;        ConfigModule configModule = new ConfigModule();&#10;        configModule.initialize();&#10;        String staging = &quot;https://api.split.io/internal/api&quot;;&#10;        String localhost = &quot;http://localhost:8080/internal/api/&quot;;&#10;        String token = &quot;$APITOKEN$&quot;;&#10;    &#10;        JerseyClientConfiguration jc = new JerseyClientConfiguration();&#10;        jc.setChunkedEncodingEnabled(false);&#10;    &#10;        Client jerseyClient = JerseyClientBuilder.createClient();&#10;        jerseyClient.property(ClientProperties.CONNECT_TIMEOUT, 500);&#10;        jerseyClient.property(ClientProperties.READ_TIMEOUT, 3000);&#10;        jerseyClient.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);&#10;        jerseyClient.property(ClientProperties.ASYNC_THREADPOOL_SIZE, 1000);&#10;        jerseyClient.register(MultiPartFeature.class);&#10;    &#10;        final Response response = $GETMETHODNAME$(localhost, jerseyClient, token);&#10;        _log.info(&quot;&quot; + response.getStatus());&#10;    }&#10;    &#10;    private static Response $GETMETHODNAME$(String baseUrl, Client jerseyClient, String apiToken) {&#10;        return get(jerseyClient, apiToken, String.format(&quot;%s%s&quot;, baseUrl, &quot;$GETPATH$&quot;));&#10;    }&#10;    &#10;    private static Response $POSTMETHODNAME$(String baseUrl, Client jerseyClient, String apiToken, $DTOCLASS$ dto) {&#10;        return post(jerseyClient, apiToken, dto, String.format(&quot;%s%s&quot;, baseUrl, &quot;$POSTPATH$&quot;));&#10;    }&#10;    &#10;    private static Response get(Client jerseyClient, String apiToken, String request) {&#10;        return jerseyClient.target(request)&#10;                .request()&#10;                .accept(MediaType.APPLICATION_JSON)&#10;                .header(HttpHeaders.AUTHORIZATION, HeadersUtil.toAPITokenHeader(apiToken))&#10;                .get();&#10;    }&#10;    &#10;    private static Response post(Client jerseyClient, String apiToken, Object dto, String request) {&#10;        return jerseyClient.target(request)&#10;                .request()&#10;                .accept(MediaType.APPLICATION_JSON)&#10;                .header(HttpHeaders.AUTHORIZATION, HeadersUtil.toAPITokenHeader(apiToken))&#10;                .post(Entity.json(dto));&#10;    }" description="Generates a simple Java CLI template for interacting with the Split app" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="APITOKEN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="GETMETHODNAME" expression="" defaultValue="getMethod" alwaysStopAt="true" />
+    <variable name="POSTMETHODNAME" expression="" defaultValue="postMethod" alwaysStopAt="true" />
+    <variable name="DTOCLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="GETPATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="POSTPATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="redisCli" value="package io.split.redis;&#10;&#10;import io.split.utils.keys.CacheKeyPrefix;&#10;import org.slf4j.Logger;&#10;import org.slf4j.LoggerFactory;&#10;import redis.clients.jedis.Jedis;&#10;import redis.clients.jedis.JedisPool;&#10;import redis.clients.jedis.JedisPoolConfig;&#10;import redis.clients.jedis.ScanParams;&#10;import redis.clients.jedis.ScanResult;&#10;&#10;public class RedisClient {&#10;    private static final Logger _log = LoggerFactory.getLogger(RedisClient.class);&#10;&#10;    public static void main(String[] args) {&#10;        String host = &quot;localhost&quot;;&#10;        int port = 6379;&#10;        int timeout = 2500;&#10;        String password = null;&#10;        String etPrefix = CacheKeyPrefix.ORG_EVENT_TYPE_LR.key(&quot;*&quot;);&#10;        String etPrefixIdx = CacheKeyPrefix.ORG_EVENT_TYPE_LR_NAME_IDX.key(&quot;*&quot;);&#10;        JedisPoolConfig config = new JedisPoolConfig();&#10;        config.setMaxTotal(2);&#10;        config.setMaxWaitMillis(1000L);&#10;        JedisPool pool = new JedisPool(config, host, port, timeout, password);&#10;        try (Jedis jedis = pool.getResource()) {&#10;            deleteForPrefix(etPrefix, jedis);&#10;            deleteForPrefix(etPrefixIdx, jedis);&#10;        }&#10;    }&#10;&#10;    private static void deleteForPrefix(String prefix, Jedis jedis) {&#10;        ScanResult&lt;String&gt; res = jedis.scan(&quot;0&quot;, new ScanParams().match(prefix).count(1000));&#10;        while (true) {&#10;            if (res.getResult().size() &gt; 0) {&#10;                Long deleteResult = jedis.del(res.getResult().toArray(new String[]{}));&#10;                _log.info(&quot;Expected: &quot; + res.getResult().size() + &quot;Deleted item count: &quot; + deleteResult);&#10;            }&#10;            if (res.getStringCursor().equals(&quot;0&quot;)) {&#10;                break;&#10;            }&#10;            res = jedis.scan(res.getStringCursor(), new ScanParams().match(prefix).count(1000));&#10;        }&#10;    }&#10;}%" toReformat="false" toShortenFQNames="true" />
+</templateSet>

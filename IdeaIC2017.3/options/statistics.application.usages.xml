@@ -1,0 +1,165 @@
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="run-configuration-type">
+      <project id="impressiongenerator" values="Application" collectionTime="1537894056243" />
+      <project id="parent" values="Application" collectionTime="1542145620817" />
+    </group>
+    <group name="module type">
+      <project id="spark-jobs" values="SBT_MODULE,JAVA_MODULE" collectionTime="1542145620978" />
+      <project id="java-client" values="JAVA_MODULE" collectionTime="1532543794946" />
+      <project id="parent" values="JAVA_MODULE" collectionTime="1542145620815" />
+      <project id="impressiongenerator" values="JAVA_MODULE" collectionTime="1537894056243" />
+      <project id="spark-parent_2.11" values="JAVA_MODULE,SBT_MODULE" collectionTime="1542145621162" />
+      <project id="split-testing" values="JAVA_MODULE" collectionTime="1515179027062" />
+    </group>
+    <group name="vcs">
+      <project id="split-testing" values="Git" collectionTime="1515179027062" />
+      <project id="spark-jobs" values="Git" collectionTime="1542145620977" />
+      <project id="parent" values="Git" collectionTime="1542145620814" />
+      <project id="spark-parent_2.11" values="Git" collectionTime="1542145621161" />
+    </group>
+    <group name="VCS Log 2">
+      <project id="split-testing" values="data.users.count.10+,data.git.root.count.1,data.branches.count.1+,data.commit.count.1K+" collectionTime="1515179027182" />
+      <project id="spark-jobs" values="data.users.count.10+,data.branches.count.100+,data.commit.count.100+,data.git.root.count.1" collectionTime="1542145621157" />
+      <project id="spark-parent_2.11" values="data.commit.count.10K+,data.users.count.1K+,data.git.root.count.1,data.branches.count.10+" collectionTime="1542145621294" />
+    </group>
+    <group name="Scala">
+      <project id="spark-parent_2.11" values="Sbt version  0.13.17,Scala  2.11.12,Library  Spark,Library  JUnit for Scala,Java version  java version  1.8.0_152 " collectionTime="1542145621298" />
+      <project id="spark-jobs" values="Library  JUnit for Scala,Scala  2.11.8,Sbt version  1.0.3,Library  Spark,Java version  java version  1.8.0_152 " collectionTime="1542145621161" />
+    </group>
+    <group name="run-configuration-type-temp">
+      <project id="split-testing" values="Application,JUnit" collectionTime="1515179027064" />
+      <project id="spark-jobs" values="Application,JUnit" collectionTime="1542145620978" />
+      <project id="parent" values="JUnit" collectionTime="1542145620817" />
+    </group>
+    <group name="file-type">
+      <project id="spark-jobs" values="sbt,PLAIN_TEXT,Properties,JSON,UNKNOWN,JAVA,ARCHIVE,Scala" collectionTime="1542145621137" />
+      <project id="java-client" values="PLAIN_TEXT,IDEA_MODULE,XML,JAVA,Properties,UNKNOWN" collectionTime="1532543795029" />
+      <project id="parent" values="Images,JavaScript,Properties,SPI,UNKNOWN,XML,PLAIN_TEXT,YAML,IDEA_MODULE,JSON,JAVA,Groovy,HTML,SQL" collectionTime="1542145620942" />
+      <project id="impressiongenerator" values="Properties,XML,IDEA_MODULE,JAVA" collectionTime="1537894056289" />
+      <project id="spark-parent_2.11" values="sbt,JAVA,Images,IDEA_MODULE,HOCON,JavaScript,SPI,YAML,ARCHIVE,XML,HTML,JSON,UNKNOWN,SQL,Native,Properties,Scala,CSS,C++,PLAIN_TEXT" collectionTime="1542145621227" />
+      <project id="split-testing" values="IDEA_PROJECT,IDEA_WORKSPACE,YAML,IDEA_MODULE,JAVA,UNKNOWN,PLAIN_TEXT,Groovy,JSON,Properties,ARCHIVE" collectionTime="1515179027175" />
+    </group>
+    <group name="Run Dashboard">
+      <project id="spark-jobs" values="run.dashboard.disabled" collectionTime="1542145621137" />
+      <project id="spark-parent_2.11" values="run.dashboard.disabled" collectionTime="1542145621227" />
+      <project id="impressiongenerator" values="run.dashboard.disabled" collectionTime="1537894056289" />
+      <project id="parent" values="run.dashboard.disabled" collectionTime="1542145620943" />
+      <project id="java-client" values="run.dashboard.disabled" collectionTime="1532543795029" />
+    </group>
+    <group name="module-language-level">
+      <project id="spark-jobs" values="JDK_1_8" collectionTime="1542145621159" />
+      <project id="java-client" values="JDK_1_7" collectionTime="1532543795031" />
+      <project id="parent" values="JDK_1_7,JDK_1_6,JDK_1_8" collectionTime="1542145620973" />
+      <project id="impressiongenerator" values="JDK_1_8" collectionTime="1537894056292" />
+      <project id="spark-parent_2.11" values="JDK_1_8" collectionTime="1542145621296" />
+      <project id="split-testing" values="JDK_1_8" collectionTime="1515179027186" />
+    </group>
+    <group name="Editor">
+      <project id="parent" values="autoOptimizeImports" collectionTime="1542145620943" />
+    </group>
+    <group name="Scala Settings">
+      <project id="spark-parent_2.11" values="scala.compiler.compile.server.used,scala.compiler.inc.type.used.IDEA,scala.sbt.idea.build" collectionTime="1542145621298" />
+      <project id="spark-jobs" values="scala.sbt.idea.build,scala.compiler.inc.type.used.IDEA,scala.compiler.compile.server.used" collectionTime="1542145621161" />
+    </group>
+    <group name="compiler">
+      <project id="parent" values="compile_parallel" collectionTime="1542145620967" />
+    </group>
+    <group name="vcs-stats">
+      <project id="spark-jobs" values="has.default.vcs.root.mapping.disabled,vcs.roots.count.1,active.changelists.count.1,unversioned.files.count.3+,ignored.files.count.1" collectionTime="1542145620978" />
+      <project id="spark-parent_2.11" values="has.default.vcs.root.mapping.disabled,active.changelists.count.1,vcs.roots.count.1,ignored.files.count.1,unversioned.files.count.10+" collectionTime="1542145621162" />
+      <project id="impressiongenerator" values="ignored.files.count.0,unversioned.files.count.0,vcs.roots.count.0,active.changelists.count.1,has.default.vcs.root.mapping.enabled" collectionTime="1537894056243" />
+      <project id="parent" values="has.default.vcs.root.mapping.disabled,active.changelists.count.1,vcs.roots.count.1,unversioned.files.count.30+,ignored.files.count.1" collectionTime="1542145620815" />
+      <project id="java-client" values="ignored.files.count.0,unversioned.files.count.0,vcs.roots.count.0,active.changelists.count.1,has.default.vcs.root.mapping.enabled" collectionTime="1532543794946" />
+    </group>
+    <group name="Git">
+      <project id="spark-jobs" values="version.2.14.3-UNIX,data.remote.servers.github.com.1,data.local.branches.count.15+,config.cherry-pick.autocommit.disabled,data.remotes.in.project.1,config.save.policy.STASH,config.warn.about.detached.enabled,config.ssh.enabled,config.push.update.all.roots.enabled,config.force.push.enabled,config.push.autoupdate.disabled,config.warn.about.crlf.enabled,config.repo.sync.NOT_DECIDED,config.update.type.BRANCH_DEFAULT,data.remote.branches.count.100+" collectionTime="1542145621159" />
+      <project id="java-client" values="config.repo.sync.NOT_DECIDED,version.0.0.0-NULL,config.force.push.enabled,config.push.autoupdate.disabled,config.update.type.BRANCH_DEFAULT,config.ssh.enabled,config.push.update.all.roots.enabled,config.save.policy.STASH,config.warn.about.detached.enabled,config.warn.about.crlf.enabled,config.cherry-pick.autocommit.disabled" collectionTime="1532543795031" />
+      <project id="parent" values="config.ssh.enabled,config.force.push.enabled,config.save.policy.STASH,config.repo.sync.NOT_DECIDED,config.push.autoupdate.disabled,data.local.branches.count.50+,data.remotes.in.project.1,config.warn.about.detached.enabled,config.cherry-pick.autocommit.disabled,version.2.14.3-UNIX,data.remote.servers.github.com.1,config.push.update.all.roots.enabled,config.warn.about.crlf.enabled,data.remote.branches.count.100+,config.update.type.BRANCH_DEFAULT" collectionTime="1542145620973" />
+      <project id="impressiongenerator" values="config.push.autoupdate.disabled,config.repo.sync.NOT_DECIDED,config.push.update.all.roots.enabled,config.save.policy.STASH,config.cherry-pick.autocommit.disabled,config.force.push.enabled,version.0.0.0-NULL,config.warn.about.crlf.enabled,config.update.type.BRANCH_DEFAULT,config.ssh.enabled,config.warn.about.detached.enabled" collectionTime="1537894056292" />
+      <project id="spark-parent_2.11" values="config.force.push.enabled,config.warn.about.crlf.enabled,data.remote.servers.github.com.1,config.save.policy.STASH,config.push.autoupdate.disabled,config.warn.about.detached.enabled,data.local.branches.count.1,data.remote.branches.count.15+,config.repo.sync.NOT_DECIDED,config.cherry-pick.autocommit.disabled,config.update.type.BRANCH_DEFAULT,config.push.update.all.roots.enabled,config.ssh.enabled,version.2.14.3-UNIX,data.remotes.in.project.1" collectionTime="1542145621296" />
+      <project id="split-testing" values="config.warn.about.crlf.enabled,config.cherry-pick.autocommit.disabled,data.local.branches.count.1,config.warn.about.detached.enabled,config.save.policy.STASH,config.push.update.all.roots.enabled,config.push.autoupdate.disabled,config.update.type.BRANCH_DEFAULT,data.remotes.in.project.1,config.repo.sync.NOT_DECIDED,config.force.push.enabled,config.ssh.enabled,data.remote.branches.count.5+" collectionTime="1515179027186" />
+    </group>
+    <group name="libraries">
+      <project id="spark-parent_2.11" values="Scala" collectionTime="1542145621232" />
+      <project id="spark-jobs" values="Scala" collectionTime="1542145621138" />
+    </group>
+    <group name="Libraries by jars">
+      <project id="split-testing" values="spring-core_1.8.0,spring-core_4.3.2.RELEASE" collectionTime="1515179027186" />
+      <project id="parent" values="velocity_1.1,velocity_1.7" collectionTime="1542145620973" />
+    </group>
+    <group name="vcs-options">
+      <project id="spark-jobs" values="perform.update.in.background.enabled,perform.commit.in.background.enabled,perform.edit.in.background.enabled,commit.before.check.todo.enabled,offer.move.failed.committed.do_nothing_silently,perform.checkout.in.background.enabled,offer.remove.empty.changelist.show_confirmation,perform.add_remove.in.background.enabled,commit.before.check.code.smell.enabled,show.changes.preview.disabled,include.text.into.shelf.enabled,offer.move.partially.committed.disabled,perform.rollback.in.background.disabled,commit.before.check.code.cleanup.disabled,commit.before.check.non.empty.comment.disabled,commit.show.unversioned.enabled,changelist.preselect.existing.disabled,changelist.make.new.active.disabled,commit.before.optimize.imports.disabled,commit.before.rearrange.disabled,commit.use.right.margin.enabled,check.conflicts.in.background.disabled,commit.before.reformat.project.disabled,commit.clear.initial.comment.disabled" collectionTime="1542145620977" />
+      <project id="java-client" values="offer.remove.empty.changelist.show_confirmation,commit.before.check.code.cleanup.disabled,commit.before.rearrange.disabled,offer.move.failed.committed.do_nothing_silently,commit.before.optimize.imports.disabled,perform.update.in.background.enabled,show.changes.preview.disabled,include.text.into.shelf.enabled,commit.clear.initial.comment.disabled,check.conflicts.in.background.disabled,perform.rollback.in.background.disabled,perform.checkout.in.background.enabled,commit.show.unversioned.enabled,commit.use.right.margin.enabled,commit.before.check.code.smell.enabled,perform.edit.in.background.enabled,changelist.make.new.active.disabled,commit.before.check.todo.enabled,changelist.preselect.existing.disabled,commit.before.check.non.empty.comment.disabled,offer.move.partially.committed.disabled,perform.add_remove.in.background.enabled,perform.commit.in.background.enabled,commit.before.reformat.project.disabled" collectionTime="1532543794946" />
+      <project id="parent" values="offer.move.partially.committed.disabled,changelist.preselect.existing.disabled,commit.before.check.non.empty.comment.disabled,show.changes.preview.disabled,commit.before.check.code.cleanup.disabled,offer.move.failed.committed.do_nothing_silently,commit.before.rearrange.disabled,perform.update.in.background.enabled,offer.remove.empty.changelist.show_confirmation,perform.add_remove.in.background.enabled,changelist.make.new.active.disabled,include.text.into.shelf.enabled,commit.show.unversioned.enabled,check.conflicts.in.background.disabled,perform.edit.in.background.enabled,commit.before.check.todo.enabled,perform.commit.in.background.enabled,commit.use.right.margin.enabled,commit.before.reformat.project.disabled,perform.checkout.in.background.enabled,commit.before.check.code.smell.enabled,commit.clear.initial.comment.disabled,perform.rollback.in.background.disabled,commit.before.optimize.imports.disabled" collectionTime="1542145620814" />
+      <project id="impressiongenerator" values="commit.before.check.code.smell.enabled,perform.update.in.background.enabled,offer.remove.empty.changelist.show_confirmation,commit.before.check.non.empty.comment.disabled,check.conflicts.in.background.disabled,commit.before.reformat.project.disabled,show.changes.preview.disabled,commit.before.rearrange.disabled,changelist.make.new.active.disabled,perform.checkout.in.background.enabled,commit.before.check.code.cleanup.disabled,include.text.into.shelf.enabled,offer.move.failed.committed.do_nothing_silently,commit.clear.initial.comment.disabled,commit.use.right.margin.enabled,perform.commit.in.background.enabled,offer.move.partially.committed.disabled,perform.add_remove.in.background.enabled,changelist.preselect.existing.disabled,commit.show.unversioned.enabled,commit.before.optimize.imports.disabled,commit.before.check.todo.enabled,perform.rollback.in.background.disabled,perform.edit.in.background.enabled" collectionTime="1537894056243" />
+      <project id="spark-parent_2.11" values="perform.checkout.in.background.enabled,changelist.make.new.active.disabled,offer.remove.empty.changelist.show_confirmation,perform.add_remove.in.background.enabled,perform.edit.in.background.enabled,commit.before.check.non.empty.comment.disabled,commit.before.optimize.imports.disabled,changelist.preselect.existing.disabled,perform.commit.in.background.enabled,offer.move.partially.committed.disabled,commit.before.reformat.project.disabled,commit.use.right.margin.enabled,show.changes.preview.disabled,offer.move.failed.committed.do_nothing_silently,check.conflicts.in.background.disabled,commit.show.unversioned.enabled,include.text.into.shelf.enabled,commit.before.check.code.smell.enabled,perform.update.in.background.enabled,commit.before.check.code.cleanup.disabled,commit.before.rearrange.disabled,commit.clear.initial.comment.disabled,perform.rollback.in.background.disabled,commit.before.check.todo.enabled" collectionTime="1542145621161" />
+      <project id="split-testing" values="commit.before.check.non.empty.comment.disabled,perform.commit.in.background.enabled,changelist.make.new.active.disabled,offer.move.failed.committed.do_nothing_silently,commit.clear.initial.comment.disabled,perform.update.in.background.enabled,perform.checkout.in.background.enabled,changelist.preselect.existing.disabled,commit.use.right.margin.enabled,commit.before.check.todo.enabled,commit.before.check.code.cleanup.disabled,commit.show.unversioned.enabled,commit.before.reformat.project.disabled,perform.add_remove.in.background.enabled,offer.move.partially.committed.disabled,offer.remove.empty.changelist.show_confirmation,commit.before.check.code.smell.enabled,include.text.into.shelf.enabled,commit.before.optimize.imports.disabled,perform.rollback.in.background.disabled,perform.edit.in.background.enabled,commit.before.rearrange.disabled,check.conflicts.in.background.disabled,show.changes.preview.disabled" collectionTime="1515179027062" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="CreateFile.CreateFileAction" count="4" />
+      <entry feature="StripeButton[Version Control].hidden" count="6" />
+      <entry feature="StripeButton[Version Control].shown" count="21" />
+      <entry feature="debugger.reload.classes" count="7" />
+      <entry feature="execute.Application.Coverage" count="2" />
+      <entry feature="execute.Application.Debug" count="451" />
+      <entry feature="execute.Application.Run" count="1129" />
+      <entry feature="execute.JUnit.Coverage" count="4" />
+      <entry feature="execute.JUnit.Debug" count="1717" />
+      <entry feature="execute.JUnit.Run" count="1659" />
+      <entry feature="execute.ScalaScriptConsoleRunConfiguration.Run" count="1" />
+      <entry feature="ide.help.reference.runToolWindow.testResultsTab" count="1" />
+      <entry feature="ide.help.reference.toolWindows.hierarchy" count="3" />
+      <entry feature="ide.help.top" count="1" />
+      <entry feature="ide.settings.Annotation Processors" count="4" />
+      <entry feature="ide.settings.Appearance" count="1" />
+      <entry feature="ide.settings.Auto Import" count="3" />
+      <entry feature="ide.settings.Code Style" count="3" />
+      <entry feature="ide.settings.Compiler" count="1" />
+      <entry feature="ide.settings.File Types" count="1" />
+      <entry feature="ide.settings.File and Code Templates" count="8" />
+      <entry feature="ide.settings.Importing" count="1" />
+      <entry feature="ide.settings.Inspections" count="17" />
+      <entry feature="ide.settings.Java" count="3" />
+      <entry feature="ide.settings.Java Compiler" count="2" />
+      <entry feature="ide.settings.Live Templates" count="25" />
+      <entry feature="ide.settings.Maven" count="8" />
+      <entry feature="ide.settings.Plugins" count="3" />
+      <entry feature="ide.settings.Project Structure" count="4" />
+      <entry feature="ide.settings.sbt" count="1" />
+      <entry feature="idea.caches.invalidated" count="16" />
+      <entry feature="ideaapp.started" count="61" />
+      <entry feature="project.view.pane.PackagesPane" count="2" />
+      <entry feature="project.view.pane.ProjectPane" count="3" />
+      <entry feature="project.view.pane.Scope.Project Files" count="1" />
+      <entry feature="scala.convert.javatext" count="6" />
+      <entry feature="scala.createFromUsage" count="6" />
+      <entry feature="scala.debugger" count="547" />
+      <entry feature="scala.debugger.compiling.evaluator" count="55" />
+      <entry feature="scala.debugger.evaluator" count="9104" />
+      <entry feature="scala.debugger.lambda.breakpoint" count="112" />
+      <entry feature="scala.extract.method" count="111" />
+      <entry feature="scala.file.script.parsed" count="316178" />
+      <entry feature="scala.file.with.type.aware.annotated" count="38999" />
+      <entry feature="scala.file.without.type.aware.annotated" count="2" />
+      <entry feature="scala.inline" count="62" />
+      <entry feature="scala.introduce.variable" count="238" />
+      <entry feature="scala.move.class" count="7" />
+      <entry feature="scala.optimize.imports" count="181" />
+      <entry feature="scala.overrideImplement" count="11" />
+      <entry feature="scala.rename.local" count="163" />
+      <entry feature="scala.rename.member" count="123" />
+      <entry feature="scala.structure.view" count="196" />
+      <entry feature="terminal.mac" count="9" />
+      <entry feature="vcs.log.ShowDiff" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="6" />
+      <entry feature="welcome.screen.WelcomeScreen.CreateNewProject" count="4" />
+      <entry feature="welcome.screen.WelcomeScreen.ImportProject" count="11" />
+      <entry feature="welcome.screen.WelcomeScreen.Plugins" count="3" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Update" count="1" />
+    </counts>
+  </component>
+</application>

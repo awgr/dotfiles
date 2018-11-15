@@ -1,0 +1,44 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="Default.savedEditorTheme" value="_@user_Default" />
+    <property name="installed.kotlin.plugin.version" value="1.2.10-release-IJ2017.3-1" />
+    <property name="android-component-compatibility-check" value="1539987268030" />
+    <property name="last.imported.location" value="$USER_HOME$/code/spark" />
+    <property name="create.project.preferred.importer" value="Maven" />
+    <property name="lastTip" value="59" />
+    <property name="file.gist.reindex.count" value="44021" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="learn.toolwindow.button.info.shown" value="true" />
+    <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="SearchEveryWhereHistory" value="EventsEsManager&#10;DataC&#10;To&#10;AuroraMetricResultsDAO&#10;}" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Code Generation" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="ExpandBeforeRunStepsPanel" value="false" />
+    <property name="ProjectStructure.TopLevelElements" value="0.097751714" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileTemplates.SelectedTemplate" value="KeyczarTool" />
+    <property name="project.wizard.group" value="org.jetbrains.idea.maven.wizards.MavenModuleBuilder" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="project.wizard.template" value="Maven" />
+    <property name="INSPECTION_FILTER_HISTORY" value="static&#10;5&#10;level&#10;unnecessary qual&#10;clarifying paren&#10;Annotation 1.4&#10;Annotation&#10;nested method call&#10;chained call&#10;not qualified" />
+    <property name="JUnitSupport.sortTestsAlphabetically" value="false" />
+    <property name="MavenModuleWizard.inheritGroupId" value="true" />
+    <property name="MavenModuleWizard.inheritVersion" value="true" />
+    <property name="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2.splitter" value="0.36031926" />
+    <property name="ShowDocumentationInToolWindow" value="true" />
+    <property name="JUnit.Splitter.Proportion" value="0.25877193" />
+    <property name="build.toolwindow.Sync.selection.state" value="consoleView" />
+    <property name="PLUGIN_FILTER" value="scala&#10;sbt" />
+    <property name="plugins.preselection.path" value="$USER_HOME$/Downloads" />
+    <property name="JUnitSupport.hideIgnoredTests" value="true" />
+    <property name="selected.color.option.type" value="NOT_USED_ELEMENT_ATTRIBUTES" />
+    <property name="fileTypeChangedCounter" value="2" />
+    <property name="scala.last.updated" value="1540597879617" />
+    <property name="disable.forced.soft.wraps.notification" value="true" />
+    <property name="KEYMAP" value="next method" />
+    <property name="#xdebugger.evaluate.splitter" value="0.53104925" />
+    <property name="ProjectStructure.SecondLevelElements" value="0.5490585" />
+  </component>
+</application>

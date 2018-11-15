@@ -1,7 +1,9 @@
-export PATH="/usr/bin:/usr/sbin:/bin:/sbin:"
-export PATH="/usr/local/sbin:"$PATH
-export PATH="/usr/local/bin:"$PATH
-export PATH="/usr/local/go/bin:"$PATH
+export PATH="/usr/bin:/usr/sbin:/bin:/sbin/:"
+export PATH="/usr/local/sbin/:"$PATH
+export PATH="/usr/local/bin/:"$PATH
+export PATH="/usr/local/go/bin/:"$PATH
+export PATH=$HOME"/.extra-bin/:"$PATH
+
 
 # il_scripts
 
@@ -53,6 +55,34 @@ compgen() {
     bash -c compgen $@;
 }
 
+run-test() {
+    if [[ $# -ne 0 ]]
+    then
+        mvn -Dtest=${1} -DfailIfNoTests=false -DtrimStackTrace=false clean test -T 2C
+    else
+        echo "USAGE: runTest <testClass>"
+    fi
+}
+
+tdump () {
+    if [[ $# -ne 1 ]]
+    then
+      echo "USAGE: $0 <JPS process name>"
+      return -1;
+    else
+      echo "Dumping $1.."
+      for i in {0..4}
+      do
+        FILE="tdump.${i}.out"
+        jstack "$(jps | grep ${1} | awk -F' ' '{printf "%s\n", $1}')" > ${FILE}
+        echo "Dumped to $FILE.."
+        sleep 2
+      done
+      echo "Done."
+      return 0
+    fi
+}
+
 alias list='/bin/ls'
 alias ls='ls -lh'
 alias ll='ls -GFlash'
@@ -65,22 +95,39 @@ alias rsapub='cat ~/.ssh/id_rsa.pub | cb'
 alias cp='cp -v'
 alias mv='mv -v'
 alias scp='scp -v'
-alias mong-staging='/usr/local/Cellar/mongodb@3.2/3.2.11/bin/mongo mongo2-aws-staging.split.io:53944/split_staging_v2 -u splitadminstaging -p benlomondstaging'
+alias mong-staging='/usr/local/Cellar/mongodb@3.2/3.2.11/bin/mongo mongo-aws-staging.split.io:53944/split_staging_v2 -u splitadminstaging -p benlomondstaging'
 alias fix-repo='mvn clean install -Dmaven.test.skip=true -T 1'
+alias aws='python ~/Library/Python/2.7/lib/python/site-packages/awscli'
+
+## Alias pip to python -m pip
+alias pip='python -m pip'
 
 export PGPORT=5432
 
 echo "=====ZSHRC CONFIGURATION OUTPUT=====";
 echo "Setting PGPORT to ${PGPORT} . . . ";
 
+
+
 export SPLIT_PROJECTS_ROOT=~/code
 echo "Configuring split project root to: ${SPLIT_PROJECTS_ROOT}"
 echo "Starting in split projects root: ${SPLIT_PROJECTS_ROOT}"
 cd $SPLIT_PROJECTS_ROOT
 
-alias split-dev="pushd .; cd ${SPLIT_PROJECTS_ROOT}/docker-compose; docker-compose up 2>&1 1> ${SPLIT_PROJECTS_ROOT}/docker-compose/docker-compose.log & disownLastJob;popd"
+split-dev() {
+    pushd . 1>/dev/null; 
+    cd ${SPLIT_PROJECTS_ROOT}/docker-compose; 
+    docker-compose $1 2>&1 1> ${SPLIT_PROJECTS_ROOT}/docker-compose/docker-compose.log & disownLastJob;
+    popd 1>/dev/null;
+}
 echo "Adding postgres 9.4 binaries to path"
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+
+echo "Adding Redis 3.2 binaries to path"
+export PATH="/usr/local/Cellar/redis@3.2/3.2.11/bin/:$PATH"
+
+echo "Adding MongoDB 3.2 binaries to path"
+export PATH="/usr/local/Cellar/mongodb@3.2/3.2.11/bin/:$PATH"
 
 source ~/code/zsh-nvm/zsh-nvm.plugin.zsh
 echo "Sourcing NVM as a ZSH plugin."

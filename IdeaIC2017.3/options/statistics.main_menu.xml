@@ -1,0 +1,43 @@
+<application>
+  <component name="MainMenuCollector">
+    <counts>
+      <entry path="Analyze -&gt; Inspect Code..." count="24" />
+      <entry path="Analyze -&gt; Run Inspection by Name..." count="2" />
+      <entry path="Build -&gt; Build Artifacts..." count="49" />
+      <entry path="Build -&gt; Build Module" count="19" />
+      <entry path="Build -&gt; Build Project" count="492" />
+      <entry path="Build -&gt; Rebuild" count="63" />
+      <entry path="Build -&gt; Rebuild Project" count="79" />
+      <entry path="Code -&gt; Delegate Methods..." count="6" />
+      <entry path="Code -&gt; Generate..." count="4" />
+      <entry path="Code -&gt; Implement Methods..." count="1" />
+      <entry path="Code -&gt; Insert Live Template..." count="1" />
+      <entry path="Code -&gt; Optimize Imports" count="5" />
+      <entry path="Code -&gt; Surround with Live Template..." count="1" />
+      <entry path="Edit -&gt; Find -&gt; Find..." count="1" />
+      <entry path="File -&gt; Close Project" count="32" />
+      <entry path="File -&gt; Invalidate Caches / Restart..." count="17" />
+      <entry path="File -&gt; New -&gt; Module from Existing Sources..." count="12" />
+      <entry path="File -&gt; New -&gt; Project from Existing Sources..." count="21" />
+      <entry path="File -&gt; New -&gt; Project..." count="4" />
+      <entry path="File -&gt; Open Recent -&gt; Manage Projects..." count="3" />
+      <entry path="File -&gt; Open Recent -&gt; Reopen Project" count="9" />
+      <entry path="File -&gt; Open..." count="8" />
+      <entry path="File -&gt; Project Structure..." count="2" />
+      <entry path="File -&gt; Synchronize" count="2" />
+      <entry path="Help -&gt; Edit Custom VM Options..." count="1" />
+      <entry path="Help -&gt; Help" count="1" />
+      <entry path="Navigate -&gt; Jump to Navigation Bar" count="1" />
+      <entry path="Refactor -&gt; Extract -&gt; Delegate..." count="1" />
+      <entry path="Refactor -&gt; Extract -&gt; Method..." count="1" />
+      <entry path="Refactor -&gt; Migrate..." count="1" />
+      <entry path="Refactor -&gt; Refactor This..." count="1" />
+      <entry path="Refactor -&gt; Rename..." count="1" />
+      <entry path="Refactor -&gt; Replace Constructor with Builder..." count="2" />
+      <entry path="Refactor -&gt; Replace Constructor with Factory Method..." count="1" />
+      <entry path="Run -&gt; Run" count="4" />
+      <entry path="Run -&gt; Run..." count="1" />
+      <entry path="Tools -&gt; Tasks &amp; Contexts -&gt; Open Task..." count="2" />
+    </counts>
+  </component>
+</application>

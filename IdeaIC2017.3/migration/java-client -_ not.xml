@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<migrationMap>
+  <name value="java-client -&gt; not" />
+  <description value="" />
+  <entry oldName="io.split.grammar.Treatments" newName="io.codigo.grammar.Treatments" type="class" />
+</migrationMap>
+
