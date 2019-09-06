@@ -113,25 +113,6 @@ function RPR_TIME() {
     fi
 }
 
-# Host in a deterministically chosen color
-RPR_SHOW_HOST=false # Set to false to disable host in rhs prompt
-function RPR_HOST() {
-    local colors
-    colors=(cyan green yellow red pink)
-    local index=$(python <<EOF
-import hashlib
-hash = int(hashlib.sha1('$(hostname)').hexdigest(), 16)
-index = hash % ${#colors} + 1
-
-print(index)
-EOF
-      )
-    local color=$colors[index]
-    if [[ "${RPR_SHOW_HOST}" == "true" ]]; then
-        echo "%{$fg[$color]%}%m%{$reset_color%}"
-    fi
-}
-
 # ' at ' in orange outputted only if both user and host enabled
 function RPR_AT() {
     if [[ "${RPR_SHOW_USER}" == "true" ]] && [[ "${RPR_SHOW_HOST}" == "true" ]]; then
@@ -141,7 +122,7 @@ function RPR_AT() {
 
 # Build the rhs prompt
 function RPR_INFO() {
-    echo "$(RPR_TIME)$(RPR_USER)$(RPR_AT)$(RPR_HOST)"
+    echo "$(RPR_TIME)$(RPR_USER)$(RPR_AT)"
 }
 
 # Set RHS prompt for git repositories

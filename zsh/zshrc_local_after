@@ -24,8 +24,9 @@ export PATH=$HOME"/.extra-bin/:"$PATH
 # export ARCHFLAGS="-arch x86_64"
 
 # Java default
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
-export JAVA_1_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
+export JAVA_1_8_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/'
+export JAVA_1_11_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/'
+export JAVA_HOME=${JAVA_1_11_HOME}
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -95,18 +96,21 @@ alias rsapub='cat ~/.ssh/id_rsa.pub | cb'
 alias cp='cp -v'
 alias mv='mv -v'
 alias scp='scp -v'
-alias mong-staging='/usr/local/Cellar/mongodb@3.2/3.2.11/bin/mongo mongo-aws-staging.split.io:53944/split_staging_v2 -u splitadminstaging -p benlomondstaging'
+alias mong-staging='/usr/local/Cellar/mongodb@3.4/3.4.18/bin/mongo --host stage/split-stage-shard-00-00-9osox.mongodb.net:27017,split-stage-shard-00-01-9osox.mongodb.net:27017,split-stage-shard-00-02-9osox.mongodb.net:27017 split_staging_v2 -u splitadminstaging -p benlomondstaging'
 alias fix-repo='mvn clean install -Dmaven.test.skip=true -T 1'
 alias aws='python ~/Library/Python/2.7/lib/python/site-packages/awscli'
 
 ## Alias pip to python -m pip
 alias pip='python -m pip'
+alias localcurl="""bash <(pbpaste | gsed 's/https\:\/\/api.split.io/http\:\/\/localhost\:8080/' | gsed \"s/-H 'User-Agent:.*-H 'Authorization/-H 'Authorization/\")"""
 
 export PGPORT=5432
 
 echo "=====ZSHRC CONFIGURATION OUTPUT=====";
 echo "Setting PGPORT to ${PGPORT} . . . ";
 
+echo "Copying cert to tunnelblick"
+cp ~/.vpn/andrew_greene.crt ~/Library/Application\ Support/Tunnelblick/Configurations/prod.tblk/Contents/Resources/
 
 
 export SPLIT_PROJECTS_ROOT=~/code
@@ -116,8 +120,8 @@ cd $SPLIT_PROJECTS_ROOT
 
 split-dev() {
     pushd . 1>/dev/null; 
-    cd ${SPLIT_PROJECTS_ROOT}/docker-compose; 
-    docker-compose $1 2>&1 1> ${SPLIT_PROJECTS_ROOT}/docker-compose/docker-compose.log & disownLastJob;
+    cd ${SPLIT_PROJECTS_ROOT}/Main; 
+    docker-compose $1 2>&1 1> ${SPLIT_PROJECTS_ROOT}/Main/docker-compose.log &
     popd 1>/dev/null;
 }
 echo "Adding postgres 9.4 binaries to path"
@@ -126,8 +130,8 @@ export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 echo "Adding Redis 3.2 binaries to path"
 export PATH="/usr/local/Cellar/redis@3.2/3.2.11/bin/:$PATH"
 
-echo "Adding MongoDB 3.2 binaries to path"
-export PATH="/usr/local/Cellar/mongodb@3.2/3.2.11/bin/:$PATH"
+echo "Adding MongoDB 3.4 binaries to path"
+export PATH="/usr/local/Cellar/mongodb@3.4/3.4.18/bin:"$PATH
 
 source ~/code/zsh-nvm/zsh-nvm.plugin.zsh
 echo "Sourcing NVM as a ZSH plugin."
